@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "URQL DevTools",
+  "version": "0.1.0",
+  "description": "Visualize the URQL normalized GraphQL cache in real-time.",
+  "devtools_page": "devtools.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [],
+  "host_permissions": ["<all_urls>"]
+}
