@@ -1,0 +1,39 @@
+{
+  "name": "urql-devtools-chrome",
+  "version": "0.1.0",
+  "description": "Chrome extension for visualizing the URQL normalized GraphQL cache in real-time",
+  "author": "Robin Verdier",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altertable-ai/urql-devtools-chrome.git"
+  },
+  "keywords": [
+    "urql",
+    "graphql",
+    "devtools",
+    "chrome-extension",
+    "cache",
+    "debugging"
+  ],
+  "scripts": {
+    "build": "vite build --config vite.config.ts && node scripts/build-scripts.mjs && cp manifest.json dist/",
+    "dev": "concurrently \"vite build --config vite.config.ts --watch\" \"node scripts/build-scripts.mjs\"",
+    "typecheck": "tsc --noEmit",
+    "package": "npm run build && cd dist && zip -r ../dist.zip . && cd .."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^25.5.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2"
+  }
+}

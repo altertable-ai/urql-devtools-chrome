@@ -1,0 +1,25 @@
+node_modules/
+dist/
+dist.zip
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env.local
+.env.*.local
+
+# Internal
+.github-publish-checklist.md
